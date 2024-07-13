@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CadastroFilmes.IoC\CadastroFilmes.IoC.csproj" />
+    <ProjectReference Include="..\CadastroFilmes.Services\CadastroFilmes.Services.csproj" />
+  </ItemGroup>
+
 </Project>

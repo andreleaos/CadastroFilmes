@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroFilmes.Api", "Cadas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroFilmes.Web", "CadastroFilmes.Web\CadastroFilmes.Web.csproj", "{A16F8A95-3396-4FB3-9026-16977C1FC29A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroFilmes.SimpleTest", "CadastroFilmes.SimpleTest\CadastroFilmes.SimpleTest.csproj", "{BBFD4956-7468-4ABF-B0B2-B0C11670F8EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{A16F8A95-3396-4FB3-9026-16977C1FC29A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A16F8A95-3396-4FB3-9026-16977C1FC29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A16F8A95-3396-4FB3-9026-16977C1FC29A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBFD4956-7468-4ABF-B0B2-B0C11670F8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBFD4956-7468-4ABF-B0B2-B0C11670F8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBFD4956-7468-4ABF-B0B2-B0C11670F8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBFD4956-7468-4ABF-B0B2-B0C11670F8EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
