@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroFilmes.Domain", "CadastroFilmes.Domain\CadastroFilmes.Domain.csproj", "{7E35EF4B-A551-483C-AE4C-0C2BFC8C7626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroFilmes.Infrastructure", "CadastroFilmes.Infrastructure\CadastroFilmes.Infrastructure.csproj", "{4A52577D-60A1-4D43-9158-68E973EA0843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroFilmes.Services", "CadastroFilmes.Services\CadastroFilmes.Services.csproj", "{D361C425-0929-4C98-BFA9-64BF074F1589}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroFilmes.IoC", "CadastroFilmes.IoC\CadastroFilmes.IoC.csproj", "{36B44AC8-49EB-47E4-9177-49D155091E70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroFilmes.Api", "CadastroFilmes.Api\CadastroFilmes.Api.csproj", "{13A4DBC4-0983-4BED-AD76-378740F66368}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroFilmes.Web", "CadastroFilmes.Web\CadastroFilmes.Web.csproj", "{A16F8A95-3396-4FB3-9026-16977C1FC29A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E35EF4B-A551-483C-AE4C-0C2BFC8C7626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E35EF4B-A551-483C-AE4C-0C2BFC8C7626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E35EF4B-A551-483C-AE4C-0C2BFC8C7626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E35EF4B-A551-483C-AE4C-0C2BFC8C7626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A52577D-60A1-4D43-9158-68E973EA0843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A52577D-60A1-4D43-9158-68E973EA0843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A52577D-60A1-4D43-9158-68E973EA0843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A52577D-60A1-4D43-9158-68E973EA0843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D361C425-0929-4C98-BFA9-64BF074F1589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D361C425-0929-4C98-BFA9-64BF074F1589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D361C425-0929-4C98-BFA9-64BF074F1589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D361C425-0929-4C98-BFA9-64BF074F1589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B44AC8-49EB-47E4-9177-49D155091E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B44AC8-49EB-47E4-9177-49D155091E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B44AC8-49EB-47E4-9177-49D155091E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B44AC8-49EB-47E4-9177-49D155091E70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13A4DBC4-0983-4BED-AD76-378740F66368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A4DBC4-0983-4BED-AD76-378740F66368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A4DBC4-0983-4BED-AD76-378740F66368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A4DBC4-0983-4BED-AD76-378740F66368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A16F8A95-3396-4FB3-9026-16977C1FC29A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16F8A95-3396-4FB3-9026-16977C1FC29A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16F8A95-3396-4FB3-9026-16977C1FC29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16F8A95-3396-4FB3-9026-16977C1FC29A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D440E334-B7A7-4E82-AC67-5E90A2A4B901}
+	EndGlobalSection
+EndGlobal
