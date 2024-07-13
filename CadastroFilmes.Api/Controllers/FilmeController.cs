@@ -21,5 +21,13 @@ namespace CadastroFilmes.Api.Controllers
             var filmes = _filmeService.Listar();
             return Ok(filmes);
         }
+
+        [HttpGet("{id}")]
+        public ActionResult Pesquisar(int id)
+        {
+            var filme = _filmeService.PesquisarPorId(id);
+            return Ok(filme);
+        }
+
     }
 }

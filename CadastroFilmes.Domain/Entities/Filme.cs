@@ -29,7 +29,7 @@ public class Filme
         dto.FilmeId = FilmeId;
         dto.Nome = Nome;
         dto.Duracao = Duracao;
-        dto.Genero = Genero.Descricao;
+        dto.Genero = Genero!=null && !string.IsNullOrEmpty(Genero.Descricao) ? Genero.Descricao : string.Empty;
         return dto;
     } 
     public static FilmeDto ConvertToDto(Filme filme)
@@ -38,7 +38,8 @@ public class Filme
         dto.FilmeId = filme.FilmeId;
         dto.Nome = filme.Nome;
         dto.Duracao = filme.Duracao;
-        dto.Genero = filme.Genero.Descricao;
+        dto.Genero = filme.Genero != null && !string.IsNullOrEmpty(filme.Genero.Descricao) ? filme.Genero.Descricao : string.Empty;
+
         return dto;
     }
     public static List<FilmeDto> ConvertToDto(List<Filme> filmes)

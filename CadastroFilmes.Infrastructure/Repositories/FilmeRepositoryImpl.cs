@@ -1,28 +1,16 @@
 ﻿using CadastroFilmes.Domain.Contracts;
 using CadastroFilmes.Domain.Entities;
+using CadastroFilmes.Infrastructure.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace CadastroFilmes.Infrastructure.Repositories;
 public class FilmeRepositoryImpl : FilmeRepository
 {
-    private static List<Filme> _filmes = new List<Filme>();
+    private readonly FilmeDbContext _filmeDbContext;
 
-    public FilmeRepositoryImpl()
+    public FilmeRepositoryImpl(FilmeDbContext filmeDbContext)
     {
-        _filmes.Add(new Filme()
-        {
-            FilmeId = 1,
-            Nome = "Top Gang 2",
-            Duracao = 88,
-            Genero = new Genero { Descricao = "Comédia" }
-        });
-
-        _filmes.Add(new Filme()
-        {
-            FilmeId = 2,
-            Nome = "As branquelas",
-            Duracao = 83,
-            Genero = new Genero { Descricao = "Comédia" }
-        });
+        _filmeDbContext = filmeDbContext;
     }
 
     public void Atualizar(Filme entidade)
@@ -42,7 +30,7 @@ public class FilmeRepositoryImpl : FilmeRepository
 
     public List<Filme> Listar()
     {
-        var filmes = _filmes
+        var filmes = _filmeDbContext.Filmes
             .OrderBy(p => p.Nome)
             .ToList();
 
@@ -51,6 +39,8 @@ public class FilmeRepositoryImpl : FilmeRepository
 
     public Filme PesquisarPorId(int id)
     {
-        throw new NotImplementedException();
+        var filme = _filmeDbContext.Filmes
+            .FirstOrDefault(p => p.FilmeId.Equals(id));
+        return filme;
     }
 }

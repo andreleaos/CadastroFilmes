@@ -1,0 +1,84 @@
+﻿-- Scripts de criação da tabela
+
+CREATE TABLE Genero (
+    GeneroId INT IDENTITY(1,1) PRIMARY KEY,
+    Descricao VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Filme (
+    FilmeId INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(200) NOT NULL,
+    Duracao INT NOT NULL,
+    GeneroId INT NOT NULL,
+    FOREIGN KEY (GeneroId) REFERENCES Genero(GeneroId)
+);
+
+CREATE TABLE Ator (
+    AtorId INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE Elenco (
+    ElencoId INT IDENTITY(1,1) NOT NULL,
+    FilmeId INT NOT NULL,
+    AtorId INT NOT NULL,
+    PRIMARY KEY (FilmeId, AtorId),
+    FOREIGN KEY (FilmeId) REFERENCES Filme(FilmeId),
+    FOREIGN KEY (AtorId) REFERENCES Ator(AtorId)
+);
+
+
+-- Script de carga inicial
+
+
+INSERT INTO Genero (Descricao) VALUES ('Ação');
+INSERT INTO Genero (Descricao) VALUES ('Comédia');
+INSERT INTO Genero (Descricao) VALUES ('Drama');
+INSERT INTO Genero (Descricao) VALUES ('Fantasia');
+INSERT INTO Genero (Descricao) VALUES ('Terror');
+INSERT INTO Genero (Descricao) VALUES ('Romance');
+INSERT INTO Genero (Descricao) VALUES ('Ficção Científica');
+INSERT INTO Genero (Descricao) VALUES ('Suspense');
+INSERT INTO Genero (Descricao) VALUES ('Aventura');
+INSERT INTO Genero (Descricao) VALUES ('Animação');
+
+INSERT INTO Filme (Nome, Duracao, GeneroId) VALUES ('Os Vingadores', 143, 1); -- Ação
+INSERT INTO Filme (Nome, Duracao, GeneroId) VALUES ('Vizinhos Imediatos de 3º Grau', 102, 2); -- Comédia
+INSERT INTO Filme (Nome, Duracao, GeneroId) VALUES ('A Vida é Bela', 116, 3); -- Drama
+INSERT INTO Filme (Nome, Duracao, GeneroId) VALUES ('Harry Potter e a Pedra Filosofal', 152, 4); -- Fantasia
+INSERT INTO Filme (Nome, Duracao, GeneroId) VALUES ('O Exorcista', 122, 5); -- Terror
+INSERT INTO Filme (Nome, Duracao, GeneroId) VALUES ('Diário de uma Paixão', 123, 6); -- Romance
+INSERT INTO Filme (Nome, Duracao, GeneroId) VALUES ('Interestelar', 169, 7); -- Ficção Científica
+INSERT INTO Filme (Nome, Duracao, GeneroId) VALUES ('A Garota no Trem', 112, 8); -- Suspense
+INSERT INTO Filme (Nome, Duracao, GeneroId) VALUES ('Indiana Jones e os Caçadores da Arca Perdida', 115, 9); -- Aventura
+INSERT INTO Filme (Nome, Duracao, GeneroId) VALUES ('Toy Story', 81, 10); -- Animação
+
+INSERT INTO Ator (Nome) VALUES ('Robert Downey Jr.');
+INSERT INTO Ator (Nome) VALUES ('Chris Hemsworth');
+INSERT INTO Ator (Nome) VALUES ('Ben Stiller');
+INSERT INTO Ator (Nome) VALUES ('Owen Wilson');
+INSERT INTO Ator (Nome) VALUES ('Roberto Benigni');
+INSERT INTO Ator (Nome) VALUES ('Tom Hanks');
+INSERT INTO Ator (Nome) VALUES ('Daniel Radcliffe');
+INSERT INTO Ator (Nome) VALUES ('Emma Watson');
+INSERT INTO Ator (Nome) VALUES ('Linda Blair');
+INSERT INTO Ator (Nome) VALUES ('Ellen Burstyn');
+
+-- Elenco de "Os Vingadores"
+INSERT INTO Elenco (FilmeId, AtorId) VALUES (1, 1); -- Robert Downey Jr.
+INSERT INTO Elenco (FilmeId, AtorId) VALUES (1, 2); -- Chris Hemsworth
+
+-- Elenco de "Vizinhos Imediatos de 3º Grau"
+INSERT INTO Elenco (FilmeId, AtorId) VALUES (2, 3); -- Ben Stiller
+INSERT INTO Elenco (FilmeId, AtorId) VALUES (2, 4); -- Owen Wilson
+
+-- Elenco de "A Vida é Bela"
+INSERT INTO Elenco (FilmeId, AtorId) VALUES (3, 5); -- Roberto Benigni
+
+-- Elenco de "Harry Potter e a Pedra Filosofal"
+INSERT INTO Elenco (FilmeId, AtorId) VALUES (4, 7); -- Daniel Radcliffe
+INSERT INTO Elenco (FilmeId, AtorId) VALUES (4, 8); -- Emma Watson
+
+-- Elenco de "O Exorcista"
+INSERT INTO Elenco (FilmeId, AtorId) VALUES (5, 9); -- Linda Blair
+INSERT INTO Elenco (FilmeId, AtorId) VALUES (5, 10); -- Ellen Burstyn
