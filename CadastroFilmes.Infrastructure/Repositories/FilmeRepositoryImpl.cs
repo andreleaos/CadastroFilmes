@@ -15,22 +15,30 @@ public class FilmeRepositoryImpl : FilmeRepository
 
     public void Atualizar(Filme entidade)
     {
-        throw new NotImplementedException();
+        _filmeDbContext.Filmes.Update(entidade);
+        _filmeDbContext.SaveChanges();
     }
 
     public void Cadastrar(Filme entidade)
     {
-        throw new NotImplementedException();
+        _filmeDbContext.Filmes.Add(entidade);
+        _filmeDbContext.SaveChanges();
     }
 
     public void Excluir(int id)
     {
-        throw new NotImplementedException();
+        var filme = PesquisarPorId(id);
+        if (filme != null)
+        {
+            _filmeDbContext.Filmes.Remove(filme);
+            _filmeDbContext.SaveChanges();
+        }
     }
 
     public List<Filme> Listar()
     {
         var filmes = _filmeDbContext.Filmes
+            .Include("Genero")
             .OrderBy(p => p.Nome)
             .ToList();
 
@@ -40,6 +48,7 @@ public class FilmeRepositoryImpl : FilmeRepository
     public Filme PesquisarPorId(int id)
     {
         var filme = _filmeDbContext.Filmes
+            .Include("Genero")
             .FirstOrDefault(p => p.FilmeId.Equals(id));
         return filme;
     }

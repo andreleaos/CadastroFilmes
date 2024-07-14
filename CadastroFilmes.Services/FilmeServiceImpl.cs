@@ -25,7 +25,6 @@ public class FilmeServiceImpl : FilmeService
             throw ex;
         }
     }
-
     public void Cadastrar(FilmeDto dto)
     {
         try
@@ -38,7 +37,6 @@ public class FilmeServiceImpl : FilmeService
             throw ex;
         }
     }
-
     public void Excluir(int id)
     {
         try
@@ -50,7 +48,6 @@ public class FilmeServiceImpl : FilmeService
             throw ex;
         }
     }
-
     public List<FilmeDto> Listar()
     {
         try
@@ -64,13 +61,12 @@ public class FilmeServiceImpl : FilmeService
             throw ex;
         }
     }
-
     public FilmeDto PesquisarPorId(int id)
     {
         try
         {
             var filmePesquisado = _filmeRepository.PesquisarPorId(id);
-            var filmeDto = filmePesquisado.ConvertToDto();
+            var filmeDto = filmePesquisado != null ? filmePesquisado.ConvertToDto() : null;
             return filmeDto;
         }
         catch (Exception ex)

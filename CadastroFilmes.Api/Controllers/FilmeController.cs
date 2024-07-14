@@ -1,4 +1,5 @@
 ﻿using CadastroFilmes.Domain.Contracts;
+using CadastroFilmes.Domain.Dtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +14,27 @@ namespace CadastroFilmes.Api.Controllers
         public FilmeController(FilmeService filmeService)
         {
             _filmeService = filmeService;
+        }
+
+        [HttpPost]
+        public ActionResult Cadastrar(FilmeDto filmeDto)
+        {
+            _filmeService.Cadastrar(filmeDto);
+            return Ok("Cadastro efuetuado com sucesso!");
+        }
+
+        [HttpPut]
+        public ActionResult Atualizar(FilmeDto filmeDto)
+        {
+            _filmeService.Atualizar(filmeDto);
+            return Ok("Atualizacao efuetuada com sucesso!");
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult Excluir(int id)
+        {
+            _filmeService.Excluir(id);
+            return Ok("Exclusao efetuada com sucesso!");
         }
 
         [HttpGet]
